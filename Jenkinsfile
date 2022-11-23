@@ -6,9 +6,6 @@ pipeline {
     environment {
         SSH_CRED = credentials('SSH-CRED')
     }
-    tools {
-            maven 'maven-3.5.0' 
-        }
     stages {
         stage('Performing Lint Checks') {
             when { branch pattern: "feature.*", comparator: "REGEXP"}
